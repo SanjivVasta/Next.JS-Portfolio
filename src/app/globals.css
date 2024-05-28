@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (max-width: 768px) {
+  .hexagon {
+    position: relative !important;
+    width: 90px !important; /* Adjust the size for mobile screens */
+    height: 100px !important; /* Adjust the size for mobile screens */
+  }
+
+  .hexagon img {
+    width: 50px !important; /* Adjust the icon size for mobile screens */
+    height: 50px !important; /* Adjust the icon size for mobile screens */
+  }
+
+  .skills-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
