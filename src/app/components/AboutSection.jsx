@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useRef, useEffect, useTransition } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import TabButton from './TabButton';
+import { useTransition } from 'react-transition-group';
 
 const TAB_DATA = [
   {
@@ -10,7 +11,7 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <h1 className="text-xl font-semibold text-white">Strengths and languages I'm experienced in</h1>
+        <h1 className="text-xl font-semibold text-white">Strengths and languages I&apos;m experienced in</h1>
         <li className="text-[#ADB7BE]">Java</li>
         <li className="text-[#ADB7BE]">Python</li>
         <li className="text-[#ADB7BE]">JavaScript</li>
@@ -108,7 +109,7 @@ const TAB_DATA = [
         <h2 className="font-semibold text-white">Fitness and Strength Training</h2>
         <h1 className="text-[#ADB7BE] mb-2">
           I believe leading a healthy and active lifestyle is crucial. Using the gym 
-          to discipline myself and progressively improve is something I have enjoy as it means 
+          to discipline myself and progressively improve is something I enjoy as it means 
           I am able to set myself goals and see physical improvements in myself.
         </h1>
         <h2 className="font-semibold text-white">Photography</h2>
@@ -124,13 +125,19 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("education");
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
+    const [tab, setTab] = useState("education");
+    const [isPending, startTransition] = useState(null);
+    
+    useEffect(() => {
+      import('react-transition-group').then(({ useTransition }) => {
+        startTransition(useTransition);
+      });
+    }, []);
+  
+    const handleTabChange = (id) => {
+      startTransition(() => {
+        setTab(id);
+      });
   };
 
   const { ref, inView } = useInView({
@@ -144,7 +151,7 @@ const AboutSection = () => {
         {/* Parent container for both images */}
         <div className="relative top-4 md:top-20">
           {/* Original image */}
-          <Image src="/images/AboutImageBase2.png" width={1000} height={1000} className="w-full h-full md:w-auto md:h-auto" />
+          <Image src="/images/AboutImageBase2.png" width={1000} height={1000} className="w-full h-full md:w-auto md:h-auto" alt="About base image" />
           {/* Overlapping image */}
           <div className="absolute inset-0 flex -top-36 md:-top-20 lg:top-0 xl:-top-40">
             <div
@@ -153,7 +160,7 @@ const AboutSection = () => {
                 inView ? 'scale-110' : 'scale-50'
               }`}
             >
-              <Image src="/images/AboutImageVector.png" width={1000} height={1000} className="w-full h-auto md:w-auto md:h-auto" />
+              <Image src="/images/AboutImageVector.png" width={1000} height={1000} className="w-full h-auto md:w-auto md:h-auto" alt="About vector image" />
             </div>
           </div>
         </div>
@@ -164,8 +171,8 @@ const AboutSection = () => {
             in light of the rapid advancements in AI and machine learning. This interest was significantly 
             amplified following my dissertation project, where I extensively utilized machine learning 
             algorithms and Convolutional Neural Networks (CNNs). I excel as a problem solver, seamlessly 
-            merging creativity with analytical skills to devise innovative solutions. Whether it's 
-            perfecting my code or my bench press form, you'll always find me aiming for peak performance 
+            merging creativity with analytical skills to devise innovative solutions. Whether it&apos;s 
+            perfecting my code or my bench press form, you&apos;ll always find me aiming for peak performance 
             in both the digital and physical worlds.
           </p>
           <div className="flex flex-row justify-start mt-8">
@@ -173,29 +180,25 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("experience")}
               active={tab === "experience"}
             >
-              {" "}
-              Experience{" "}
+              Experience
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("interests")}
               active={tab === "interests"}
             >
-              {" "}
-              Interests{" "}
+              Interests
             </TabButton>
           </div>
           <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>

@@ -16,7 +16,7 @@ const HeroSection = () => {
           className="col-span-7 place-self-center text-center sm:text-left"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Hello, I'm{" "}</span><br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Hello, I&#39;m{" "}</span><br />
             <TypeAnimation
               sequence={[
                 'Sanjiv Vasta',
@@ -35,7 +35,7 @@ const HeroSection = () => {
             Experienced in a range of programming languages, dedicated to crafting exceptional
             digital experiences. With many years expertise, I specialize in creating user-friendly
             interfaces and responsive designs as well as back-end development with past projects in
-            machine learning and autonomous vehicles. Explore my portfolio to see my work, and let's connect
+            machine learning and autonomous vehicles. Explore my portfolio to see my work, and let&#39;s connect
             to discuss how I can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">

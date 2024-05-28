@@ -14,7 +14,7 @@ const Skills = () => {
         <Hexagon x={440} y={50} icon="/images/icons/CSS.png"/>
         <Hexagon x={560} y={50} icon="/images/icons/React.png"/>
         <Hexagon x={620} y={155} icon="/images/icons/C.png"/>
-        <Hexagon x={680} y={50} icon="/images/icons/SQL.png"/>
+        <Hexagon x={680} y={50} icon="/images/icons/sql.png"/>
         <Hexagon x={740} y={155} icon="/images/icons/PHP.png"/>
         <Hexagon x={800} y={50} icon="/images/icons/Adobe.png"/>
       </div>
@@ -29,7 +29,7 @@ const Skills = () => {
         <Hexagon x={250} y={-480} icon="/images/icons/CSS.png"/>
         <Hexagon x={360} y={-580} icon="/images/icons/React.png"/>
         <Hexagon x={30} y={-500} icon="/images/icons/C.png"/>
-        <Hexagon x={140} y={-600} icon="/images/icons/SQL.png"/>
+        <Hexagon x={140} y={-600} icon="/images/icons/sql.png"/>
         <Hexagon x={250} y={-700} icon="/images/icons/PHP.png"/>
         <Hexagon x={360} y={-800} icon="/images/icons/Adobe.png"/>
       </div>
