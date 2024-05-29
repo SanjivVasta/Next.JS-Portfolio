@@ -22,16 +22,16 @@ const Skills = () => {
       {/* Small screen hexagons */}
       <div className="block md:hidden">
         <Hexagon x={30} y={20} icon="/images/icons/Java2.png"/> 
-        <Hexagon x={85} y={10} icon="/images/icons/Python.png"/>
-        <Hexagon x={305} y={-90} icon="/images/icons/JavaScript.png"/>
-        <Hexagon x={140} y={-280} icon="/images/icons/RaspberryPi2.png"/>
-        <Hexagon x={195} y={-290} icon="/images/icons/HTML.png"/>
-        <Hexagon x={250} y={-480} icon="/images/icons/CSS.png"/>
-        <Hexagon x={360} y={-580} icon="/images/icons/React.png"/>
-        <Hexagon x={30} y={-500} icon="/images/icons/C.png"/>
-        <Hexagon x={140} y={-600} icon="/images/icons/sql.png"/>
-        <Hexagon x={250} y={-700} icon="/images/icons/PHP.png"/>
-        <Hexagon x={360} y={-800} icon="/images/icons/Adobe.png"/>
+        <Hexagon x={70} y={20} icon="/images/icons/Python.png"/>
+        <Hexagon x={230} y={-50} icon="/images/icons/JavaScript.png"/>
+        <Hexagon x={110} y={-190} icon="/images/icons/RaspberryPi2.png"/>
+        <Hexagon x={150} y={-190} icon="/images/icons/HTML.png"/>
+        <Hexagon x={190} y={-330} icon="/images/icons/CSS.png"/>
+        <Hexagon x={270} y={-400} icon="/images/icons/React.png"/>
+        <Hexagon x={30} y={-330} icon="/images/icons/C.png"/>
+        <Hexagon x={110} y={-400} icon="/images/icons/sql.png"/>
+        <Hexagon x={190} y={-470} icon="/images/icons/PHP.png"/>
+        <Hexagon x={270} y={-540} icon="/images/icons/Adobe.png"/>
       </div>
     </div>
   );

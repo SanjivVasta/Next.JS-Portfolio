@@ -35,13 +35,13 @@ body {
 @media (max-width: 768px) {
   .hexagon {
     position: relative !important;
-    width: 90px !important; /* Adjust the size for mobile screens */
-    height: 100px !important; /* Adjust the size for mobile screens */
+    width: 60px !important; /* Adjust the size for mobile screens */
+    height: 70px !important; /* Adjust the size for mobile screens */
   }
 
   .hexagon img {
-    width: 50px !important; /* Adjust the icon size for mobile screens */
-    height: 50px !important; /* Adjust the icon size for mobile screens */
+    width: 35px !important; /* Adjust the icon size for mobile screens */
+    height: 35px !important; /* Adjust the icon size for mobile screens */
   }
 
   .skills-container {
@@ -50,3 +50,23 @@ body {
   }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #151515; /* Background color for the entire page */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 50;
+}
+
+.section {
+  width: 100%;
+  margin: 0;
+  padding: 100;
+}
