@@ -8,7 +8,7 @@ import { Link as ScrollLink } from 'react-scroll';
 const HeroSection = () => {
   return (
     <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+      <div className="grid grid-cols-1 sm:grid-cols-12 mt-16">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
